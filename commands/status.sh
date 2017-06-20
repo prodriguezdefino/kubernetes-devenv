@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 
-echo "${GREEN}cluster status..."
-echo "*****************${NC}"
+$GREEN
+echo "cluster status..."
+echo "*****************"
+$NC
 minikube status
 echo " "
-echo "${GREEN}services status..."
-echo "******************${NC}"
+$GREEN
+echo "services status..."
+echo "******************"
+$NC
 kubectl get services
 echo " "
+$GREEN
+echo "services urls..."
+echo "****************"
+$NC
 minikube service list
 echo " "

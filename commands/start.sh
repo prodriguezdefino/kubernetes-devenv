@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-echo "${GREEN}Starting devenv..."
-echo "******************${NC}"
+
+$GREEN
+echo "Starting devenv..."
+echo "******************"
+$NC
 minikube start
 
 echo " "
-echo "${GREEN}setting docker client to kubernetes docker server...${NC}"
+$GREEN
+echo "setting docker client to kubernetes docker server..."
+$NC
 eval $(minikube docker-env)
 
 echo " "

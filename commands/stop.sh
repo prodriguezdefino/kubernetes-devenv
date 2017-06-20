@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-echo "${GREEN}Stoping devenv...${NC}"
+
+$GREEN
+echo "Stoping devenv..."
+$NC
 
 minikube stop
