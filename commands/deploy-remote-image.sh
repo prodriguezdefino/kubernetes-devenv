@@ -12,7 +12,7 @@ $GREEN
 echo "deploying service..."
 echo "********************"
 $NC
-kubectl run $1 --image=$2 --port=$3 --image-pull-policy=Always && \
-kubectl expose deployment $1 --type=NodePort && \
+kubectl run $1 --image=$2 --port=$3 --image-pull-policy=Always -l app=$1,environment=devenv && \
+kubectl expose deployment $1 --type=NodePort -l app=$1,environment=devenv && \
 retrieveLocalUrl $1
 echo " "
