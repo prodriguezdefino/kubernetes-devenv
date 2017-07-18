@@ -32,6 +32,14 @@ case "$1" in
       source $KBNTS_DEVENV_DIR/commands/deploy-remote-image.sh $2 $3 $4
     fi
     ;;
+  expose-port)
+    if test "$#" -ne 5; then
+      echo "Illegal number of parameters"
+      echo "<service-name> <port> <target-port> <port-name> are the expected parameters"
+    else
+      source $KBNTS_DEVENV_DIR/commands/expose-port.sh $2 $3 $4 $5
+    fi
+    ;;
   undeploy)
     if test "$#" -ne 2; then
       echo "Illegal number of parameters"
